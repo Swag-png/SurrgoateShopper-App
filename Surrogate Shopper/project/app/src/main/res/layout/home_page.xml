@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Heading at top center -->
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/dark_forest_green"
+            android:fontFamily="sans-serif-medium"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Customer Login"
+            android:textSize="38sp" />
+
+        <!-- Spinner with 60% width and centered -->
+
+        <!-- First horizontal layout -->
+        <Spinner
+            android:id="@+id/list"
+            android:layout_width="300dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/my_spinner_items"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:id="@+id/vertlay1"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/dark_forest_green"
+                android:text="Email:"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- Second horizontal layout -->
+        <LinearLayout
+            android:id="@+id/vertlay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/dark_forest_green"
+                android:text="Password:"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- Buttons and other views below -->
+
+        <Button
+            android:id="@+id/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:shadowColor="#0E4D0F"
+            android:text="Enter"
+            android:backgroundTint="@color/dark_forest_green"
+            android:textColor="#F6F6F6"
+            android:textColorLink="@android:color/holo_green_dark"
+            app:rippleColor="#0F4711"
+            app:strokeColor="#135F16" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:text="Don't have an account?"
+            android:textColor="#117115" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/dark_forest_green"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="8dp" />
+    </LinearLayout>
+</FrameLayout>

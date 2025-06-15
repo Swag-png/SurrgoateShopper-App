@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/home_page">
+    <fragment
+        android:id="@+id/home_page"
+        android:name="project.com2025.HomePage"
+        android:label="home_page"
+        tools:layout="@layout/home_page" >
+        <action
+            android:id="@+id/action_home_page_to_customerRegistration"
+            app:destination="@id/customerRegistration" />
+        <action
+            android:id="@+id/action_home_page_to_customerHomePage"
+            app:destination="@id/customerHomePage" />
+        <action
+            android:id="@+id/action_home_page_to_volunteer_reg"
+            app:destination="@id/volunteer_reg" />
+        <action
+            android:id="@+id/action_home_page_to_volunteer_home"
+            app:destination="@id/volunteer_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerRegistration"
+        android:name="project.com2025.CustomerRegistration"
+        android:label="customer_registration"
+        tools:layout="@layout/customer_registration" >
+        <action
+            android:id="@+id/action_customerRegistration_to_passwordCreation"
+            app:destination="@id/passwordCreation" />
+        <action
+            android:id="@+id/action_customerRegistration_to_home_page2"
+            app:destination="@id/home_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordCreation"
+        android:name="project.com2025.PasswordCreation"
+        android:label="password_creation"
+        tools:layout="@layout/password_creation" >
+        <action
+            android:id="@+id/action_passwordCreation_to_customerHomePage"
+            app:destination="@id/customerHomePage" />
+        <action
+            android:id="@+id/action_passwordCreation_to_customerRegistration"
+            app:destination="@id/customerRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerHomePage"
+        android:name="project.com2025.CustomerHomePage"
+        android:label="customer_home_page"
+        tools:layout="@layout/customer_home_page" >
+        <action
+            android:id="@+id/action_customerHomePage_to_customerProfile"
+            app:destination="@id/customerProfile" />
+        <action
+            android:id="@+id/action_customerHomePage_to_cart"
+            app:destination="@id/cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerProfile"
+        android:name="project.com2025.CustomerProfile"
+        android:label="customer_profile"
+        tools:layout="@layout/customer_profile" >
+        <action
+            android:id="@+id/action_customerProfile_to_customerPastOrders"
+            app:destination="@id/customerPastOrders" />
+        <action
+            android:id="@+id/action_customerProfile_to_customerChangeDetails"
+            app:destination="@id/customerChangeDetails" />
+        <action
+            android:id="@+id/action_customerProfile_to_customerHomePage"
+            app:destination="@id/customerHomePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerPastOrders"
+        android:name="project.com2025.CustomerPastOrders"
+        android:label="customer_past_orders"
+        tools:layout="@layout/customer_past_orders" >
+        <action
+            android:id="@+id/action_customerPastOrders_to_customerProfile"
+            app:destination="@id/customerProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerChangeDetails"
+        android:name="project.com2025.CustomerChangeDetails"
+        android:label="customer_change_details"
+        tools:layout="@layout/customer_change_details" >
+        <action
+            android:id="@+id/action_customerChangeDetails_to_customerProfile"
+            app:destination="@id/customerProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/volunteer_reg"
+        android:name="project.com2025.volunteer_reg"
+        android:label="volunteer_reg"
+        tools:layout="@layout/volunteer_reg" >
+        <action
+            android:id="@+id/action_volunteer_reg_to_home_page"
+            app:destination="@id/home_page" />
+        <action
+            android:id="@+id/action_volunteer_reg_to_volunteer_password"
+            app:destination="@id/volunteer_password" />
+    </fragment>
+    <fragment
+        android:id="@+id/volunteer_password"
+        android:name="project.com2025.volunteer_password"
+        android:label="volunteer_password"
+        tools:layout="@layout/volunteer_password" >
+        <action
+            android:id="@+id/action_volunteer_password_to_volunteer_reg"
+            app:destination="@id/volunteer_reg" />
+        <action
+            android:id="@+id/action_volunteer_password_to_volunteer_home"
+            app:destination="@id/volunteer_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/volunteer_home"
+        android:name="project.com2025.volunteer_home"
+        android:label="volunteer_home"
+        tools:layout="@layout/volunteer_home" >
+        <action
+            android:id="@+id/action_volunteer_home_to_volunteer_password"
+            app:destination="@id/volunteer_password" />
+        <action
+            android:id="@+id/action_volunteer_home_to_volunteer1"
+            app:destination="@id/volunteer1" />
+    </fragment>
+    <fragment
+        android:id="@+id/volunteer1"
+        android:name="project.com2025.Volunteer1"
+        android:label="volunteer1"
+        tools:layout="@layout/volunteer1" >
+        <action
+            android:id="@+id/action_volunteer1_to_volunteer_home"
+            app:destination="@id/volunteer_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart"
+        android:name="project.com2025.Cart"
+        android:label="cart"
+        tools:layout="@layout/cart_activity" >
+        <action
+            android:id="@+id/action_cart_to_customerHomePage"
+            app:destination="@id/customerHomePage" />
+        <action
+            android:id="@+id/action_cart_to_thanks"
+            app:destination="@id/thanks" />
+    </fragment>
+    <fragment
+        android:id="@+id/thanks"
+        android:name="project.com2025.Thanks"
+        android:label="fragment_thanks"
+        tools:layout="@layout/fragment_thanks" >
+        <action
+            android:id="@+id/action_thanks_to_order"
+            app:destination="@id/order" />
+    </fragment>
+    <fragment
+        android:id="@+id/order"
+        android:name="project.com2025.order"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+</navigation>
